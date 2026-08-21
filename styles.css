@@ -617,106 +617,6 @@ html.a11y-hide-images img,html.a11y-hide-images iframe,html.a11y-hide-images .ti
 .contact-ill{margin:22px auto 0;max-width:220px;opacity:.9}
 .contact-ill svg{width:100%;height:auto}
 
-/* --- Animated humanoid mascot (contact card) --- */
-.mascot{width:100%;height:auto;max-width:210px;margin:0 auto;display:block;overflow:visible}
-.mascot .m-body{animation:mBob 3s ease-in-out infinite}
-@keyframes mBob{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
-.mascot .m-shadow{animation:mShadow 3s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
-@keyframes mShadow{0%,100%{transform:scale(1);opacity:.8}50%{transform:scale(.82);opacity:.5}}
-.mascot .m-wave{transform-box:fill-box;transform-origin:bottom center;animation:mWave 1.4s ease-in-out infinite}
-@keyframes mWave{0%,100%{transform:rotate(-8deg)}50%{transform:rotate(18deg)}}
-.mascot .m-eye{transform-box:fill-box;transform-origin:center;animation:mBlink 4.5s infinite}
-@keyframes mBlink{0%,93%,100%{transform:scaleY(1)}96%{transform:scaleY(.1)}}
-@media (prefers-reduced-motion:reduce){.mascot .m-body,.mascot .m-shadow,.mascot .m-wave,.mascot .m-eye{animation:none}}
-
-/* --- Chunky talking mascot with speech bubble --- */
-.mascot-wrap{position:relative;max-width:250px;margin:24px auto 0;display:flex;flex-direction:column;align-items:center}
-.mascot-speech{position:relative;background:#fff;color:var(--green-ink);font-family:var(--sans);font-weight:700;font-size:.9rem;line-height:1.35;text-align:center;padding:12px 18px;border-radius:20px;box-shadow:var(--shadow-card);max-width:210px;min-height:2.6em;display:flex;align-items:center;justify-content:center;margin-bottom:8px;transition:opacity .3s var(--ease),transform .3s var(--ease)}
-.mascot-speech::before{content:"";position:absolute;width:14px;height:14px;border-radius:50%;background:#fff;bottom:-4px;left:calc(50% - 16px);box-shadow:0 6px 14px -8px rgba(31,77,46,.4)}
-.mascot-speech::after{content:"";position:absolute;width:8px;height:8px;border-radius:50%;background:#fff;bottom:-12px;left:calc(50% - 6px)}
-.mascot-speech.fade{opacity:0;transform:translateY(4px)}
-.mascot2{width:100%;height:auto;overflow:visible;cursor:pointer}
-.mascot2 .m2-body{animation:m2Bob 2.8s ease-in-out infinite}
-@keyframes m2Bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
-.mascot2 .m2-shadow{transform-box:fill-box;transform-origin:center;animation:m2Shadow 2.8s ease-in-out infinite}
-@keyframes m2Shadow{0%,100%{transform:scale(1);opacity:.9}50%{transform:scale(.82);opacity:.55}}
-.mascot2 .m2-arm{transform-box:fill-box;transform-origin:bottom left;animation:m2Gesture 1.9s ease-in-out infinite}
-@keyframes m2Gesture{0%,100%{transform:rotate(-6deg)}50%{transform:rotate(16deg)}}
-.mascot2 .m2-eye{transform-box:fill-box;transform-origin:center;animation:m2Blink 4.5s infinite}
-@keyframes m2Blink{0%,93%,100%{transform:scaleY(1)}96%{transform:scaleY(.12)}}
-.mascot-wrap:hover .m2-body{animation:m2Jump .55s var(--ease)}
-@keyframes m2Jump{0%,100%{transform:translateY(0)}45%{transform:translateY(-15px)}}
-@media (prefers-reduced-motion:reduce){.mascot2 .m2-body,.mascot2 .m2-shadow,.mascot2 .m2-arm,.mascot2 .m2-eye{animation:none}}
-
-/* --- Scroll-aware guide assistant --- */
-.guide{position:fixed;right:18px;bottom:18px;z-index:195;display:flex;flex-direction:column;align-items:flex-end;gap:10px;--acc:#e0a91b}
-.guide-bubble{max-width:266px;background:#fff;color:var(--green-ink);border-radius:18px;box-shadow:var(--shadow-soft);padding:14px 30px 14px 16px;font-size:.9rem;line-height:1.45;position:relative;opacity:0;transform:translateY(10px) scale(.95);transform-origin:bottom right;transition:opacity .28s var(--ease),transform .28s var(--ease);pointer-events:none}
-.guide-bubble.show{opacity:1;transform:none;pointer-events:auto}
-.guide-bubble b{display:block;font-family:var(--head);color:var(--green-ink);font-size:1rem;margin-bottom:3px}
-.guide-bubble .g-close{position:absolute;top:6px;right:8px;width:22px;height:22px;border:0;background:none;color:var(--ink-soft);font-size:1.1rem;line-height:1;cursor:pointer;border-radius:50%}
-.guide-bubble .g-close:hover{background:var(--cream-2)}
-.guide-bubble::after{content:"";position:absolute;bottom:-8px;right:36px;border:8px solid transparent;border-top-color:#fff;border-bottom:0}
-.guide-bot{width:100px;height:auto;cursor:pointer;overflow:visible;filter:drop-shadow(0 12px 22px rgba(31,77,46,.2))}
-.guide-bot .g-float{animation:gfloat 3.4s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
-@keyframes gfloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
-.guide-bot .g-eye{transform-box:fill-box;transform-origin:center;animation:geblink 4.8s infinite}
-@keyframes geblink{0%,94%,100%{transform:scaleY(1)}97%{transform:scaleY(.1)}}
-.guide-bot .r-acc{fill:var(--acc)}
-.guide-bot .r-ring{stroke:var(--acc)}
-.guide-bot .r-pulse{animation:grpulse 2.2s ease-in-out infinite}
-@keyframes grpulse{0%,100%{opacity:.5}50%{opacity:1}}
-@media(max-width:600px){.guide-bot{width:84px}.guide-bubble{max-width:210px;font-size:.85rem}}
-@media(prefers-reduced-motion:reduce){.guide-bot .g-float,.guide-bot .g-eye,.guide-bot .r-pulse{animation:none}}
-
-/* guide robot waving arm */
-.guide-bot .g-arm{transform-box:fill-box;transform-origin:bottom center;animation:garm 1.9s ease-in-out infinite}
-@keyframes garm{0%,100%{transform:rotate(-8deg)}50%{transform:rotate(14deg)}}
-@media(prefers-reduced-motion:reduce){.guide-bot .g-arm{animation:none}}
-
-/* guide robot "explaining" animation (only while a bubble is showing) */
-.guide-bot .g-head{transform-box:fill-box;transform-origin:bottom center}
-.guide-bot.talking .g-head{animation:gtalk 1.3s ease-in-out infinite}
-@keyframes gtalk{0%,100%{transform:rotate(-2.5deg)}50%{transform:rotate(2.5deg)}}
-.guide-bot .g-mouth{transform-box:fill-box;transform-origin:center}
-.guide-bot.talking .g-mouth{animation:gmouth .42s ease-in-out infinite}
-@keyframes gmouth{0%,100%{transform:scaleY(1)}50%{transform:scaleY(2)}}
-.guide-bot.talking .g-arm{animation-duration:.9s}
-@media(prefers-reduced-motion:reduce){.guide-bot.talking .g-head,.guide-bot.talking .g-mouth{animation:none}}
-
-/* guide robot — varied talking postures (chosen at random per explanation) */
-.guide-bot.talk-1.talking .g-head{animation:t1h 1.3s ease-in-out infinite}
-@keyframes t1h{0%,100%{transform:rotate(-3deg)}50%{transform:rotate(3deg)}}
-.guide-bot.talk-1.talking .g-arm{animation:t1a .9s ease-in-out infinite}
-@keyframes t1a{0%,100%{transform:rotate(-8deg)}50%{transform:rotate(16deg)}}
-.guide-bot.talk-2.talking .g-head{animation:t2h 1s ease-in-out infinite}
-@keyframes t2h{0%,100%{transform:translateY(0) rotate(1deg)}50%{transform:translateY(-3px) rotate(-1deg)}}
-.guide-bot.talk-2.talking .g-arm{animation:t2a 1.4s ease-in-out infinite}
-@keyframes t2a{0%,100%{transform:rotate(-3deg)}50%{transform:rotate(9deg)}}
-.guide-bot.talk-3.talking .g-head{animation:t3h 1.6s ease-in-out infinite}
-@keyframes t3h{0%,100%{transform:rotate(2deg)}50%{transform:rotate(5deg)}}
-.guide-bot.talk-3.talking .g-arm{animation:t3a 1.1s ease-in-out infinite}
-@keyframes t3a{0%,100%{transform:rotate(-24deg)}50%{transform:rotate(-8deg)}}
-.guide-bot.talk-4.talking .g-float{animation:t4b 2s ease-in-out infinite}
-@keyframes t4b{0%,100%{transform:translateX(-3px) rotate(-1.5deg)}50%{transform:translateX(3px) rotate(1.5deg)}}
-.guide-bot.talk-4.talking .g-head{animation:t4h 1.3s ease-in-out infinite}
-@keyframes t4h{0%,100%{transform:rotate(2deg)}50%{transform:rotate(-2deg)}}
-.guide-bot.talk-4.talking .g-arm{animation:t4a 1s ease-in-out infinite}
-@keyframes t4a{0%,100%{transform:rotate(-6deg)}50%{transform:rotate(14deg)}}
-@media(prefers-reduced-motion:reduce){.guide-bot[class*="talk-"] .g-head,.guide-bot[class*="talk-"] .g-arm,.guide-bot.talk-4 .g-float{animation:none}}
-
-/* guide robot — left arm movement (idle + per-posture) */
-.guide-bot .g-arm2{transform-box:fill-box;transform-origin:top center;animation:ga2idle 3.6s ease-in-out infinite}
-@keyframes ga2idle{0%,100%{transform:rotate(2deg)}50%{transform:rotate(-2deg)}}
-.guide-bot.talk-1.talking .g-arm2{animation:t1a2 1.1s ease-in-out infinite}
-@keyframes t1a2{0%,100%{transform:rotate(7deg)}50%{transform:rotate(-7deg)}}
-.guide-bot.talk-2.talking .g-arm2{animation:t2a2 1.4s ease-in-out infinite}
-@keyframes t2a2{0%,100%{transform:rotate(4deg)}50%{transform:rotate(-5deg)}}
-.guide-bot.talk-3.talking .g-arm2{animation:t3a2 1.5s ease-in-out infinite}
-@keyframes t3a2{0%,100%{transform:rotate(3deg)}50%{transform:rotate(-4deg)}}
-.guide-bot.talk-4.talking .g-arm2{animation:t4a2 1s ease-in-out infinite}
-@keyframes t4a2{0%,100%{transform:rotate(9deg)}50%{transform:rotate(-9deg)}}
-@media(prefers-reduced-motion:reduce){.guide-bot .g-arm2{animation:none}}
-
 /* --- HIPAA badge in the footer brand column --- */
 .brand-hipaa{display:flex;align-items:center;gap:12px;margin-top:24px;max-width:22rem;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:13px 16px}
 .brand-hipaa .bh-badge{width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,.1);color:#fff;display:grid;place-items:center;flex:0 0 auto}
@@ -724,11 +624,8 @@ html.a11y-hide-images img,html.a11y-hide-images iframe,html.a11y-hide-images .ti
 .brand-hipaa .bh-text b{display:block;font-family:var(--head);color:#fff;font-size:1rem;line-height:1.15}
 .brand-hipaa .bh-text span{color:rgba(255,255,255,.7);font-size:.82rem;line-height:1.35}
 
-/* --- Mobile fit fixes (guide assistant + contact pills) --- */
+/* --- Mobile fit fixes (contact pills) --- */
 @media(max-width:700px){
-  .guide{right:12px;bottom:12px;gap:8px}
-  .guide-bot{width:60px}
-  .guide-bubble{max-width:min(230px,74vw);font-size:.85rem;padding:12px 26px 12px 14px}
   .contact-list li{padding:13px 14px}
   .contact-list a,.contact-list span{overflow-wrap:anywhere;word-break:break-word}
 }
