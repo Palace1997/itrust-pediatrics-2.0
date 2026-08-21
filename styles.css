@@ -452,6 +452,12 @@ button{font-family:inherit;cursor:pointer}
   .footer-left{gap:26px}
   .hero-badge{left:0}.hero-badge2{right:0}
   .concern-foot{flex-direction:column;align-items:flex-start}
+  /* center the appointment form on phones to match the centered card copy */
+  .contact-form .field label{text-align:center}
+  .contact-form .field input,
+  .contact-form .field select,
+  .contact-form .field textarea{text-align:center}
+  .contact-form .field-consent{justify-content:center;text-align:left}
 }
 
 /* ==========================================================================
