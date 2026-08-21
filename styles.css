@@ -174,49 +174,18 @@ button{font-family:inherit;cursor:pointer}
 .hero-badge2 span{font-size:.72rem;font-weight:700;letter-spacing:.03em;opacity:.85}
 
 /* Hero — Magazine Cover layout */
-.hero-cover{position:relative;overflow:hidden;background:var(--cream);isolation:isolate}
-/* full-bleed photo behind everything */
-.hero-cover .hc-bg{position:absolute;inset:0;z-index:0}
-.hero-cover .hc-bg img{width:100%;height:100%;object-fit:cover;object-position:center 22%}
-.hero-cover .hc-bg::after{content:"";position:absolute;inset:0;
-  background:linear-gradient(180deg,rgba(251,247,238,0) 0%,rgba(251,247,238,.15) 42%,rgba(251,247,238,.75) 74%,var(--cream) 100%)}
-.hero-cover .hc-inner{position:relative;z-index:2;max-width:1300px;margin:0 auto;
-  padding:clamp(60px,10vw,150px) clamp(20px,4vw,56px) clamp(40px,5vw,70px);min-height:640px;display:flex;align-items:center}
-.hero-cover .hc-card{position:relative;z-index:2;width:min(880px,70%);background:var(--cream);border:1px solid var(--cream-3);
-  border-radius:32px;padding:clamp(30px,4vw,52px);box-shadow:var(--shadow-soft);text-align:center}
+.hero-cover{position:relative;overflow:hidden}
+.hero-cover .hc-photo img{width:100%;height:550px;object-fit:cover;object-position:center 30%;display:block}
+.hero-cover .hc-card{position:relative;z-index:2;width:min(920px,92%);margin:-110px auto clamp(2.5rem,5vw,4rem);background:var(--cream);border:1px solid var(--cream-3);border-radius:32px;padding:clamp(28px,4vw,48px);box-shadow:var(--shadow-soft);text-align:center}
 .hero-cover .hc-card>*+*{margin-top:18px}
 .hero-cover .eyebrow{margin:0 auto}
-.hero-cover h1{font-family:var(--head);font-weight:500;color:var(--green-ink);line-height:1.04;letter-spacing:-.01em;font-size:clamp(2.2rem,4.6vw,3.6rem);margin:0}
-.hero-cover .lead{color:var(--ink-soft);font-size:1.12rem;line-height:1.6;max-width:40rem;margin-left:auto;margin-right:auto}
+.hero-cover h1{font-family:var(--head);font-weight:500;color:var(--green-ink);line-height:1.05;letter-spacing:-.01em;font-size:clamp(2.1rem,4vw,3.4rem);margin:0}
+.hero-cover .lead{color:var(--ink-soft);font-size:1.12rem;line-height:1.6;max-width:44rem;margin-left:auto;margin-right:auto}
 .hero-cover .hero-actions{justify-content:center}
 .hero-cover .hero-reassure{justify-content:center;white-space:normal;margin-top:22px}
-
-/* decorative patient-portal window peeking on the right edge */
-.hc-portal{position:absolute;z-index:1;right:clamp(-120px,-4vw,-40px);top:96px;width:min(560px,44vw);
-  background:#fff;border-radius:18px 18px 0 0;box-shadow:0 50px 90px -40px rgba(31,77,46,.5);
-  border:1px solid #eee;transform:rotate(-1deg);overflow:hidden}
-.hc-portal .pbar{display:flex;align-items:center;gap:14px;padding:12px 16px;background:#f3f1ec;border-bottom:1px solid #e9e6df}
-.hc-portal .pdots{display:flex;gap:7px}
-.hc-portal .pdots i{width:11px;height:11px;border-radius:50%;display:block}
-.hc-portal .pdots i:nth-child(1){background:#ff5f57}
-.hc-portal .pdots i:nth-child(2){background:#febc2e}
-.hc-portal .pdots i:nth-child(3){background:#28c840}
-.hc-portal .psearch{margin-left:auto;width:190px;height:22px;border-radius:999px;background:#e7e3da}
-.hc-portal .pbody{padding:22px;position:relative}
-.hc-portal .pavatar{position:absolute;right:26px;top:18px;width:64px;height:64px;border-radius:50%;background:var(--coral-soft);border:3px solid #fff;box-shadow:var(--shadow-card)}
-.hc-portal .phead{width:56%;height:16px;border-radius:6px;background:var(--sage-soft);margin-bottom:10px}
-.hc-portal .pfield{width:100%;height:52px;border-radius:12px;background:#fff;border:2px solid #eef1e8;margin:14px 0 22px}
-.hc-portal .prow{display:grid;grid-template-columns:1.4fr .8fr .7fr;gap:12px;align-items:center;padding:12px 0;border-top:1px solid #f0eee7}
-.hc-portal .prow span{height:12px;border-radius:6px;background:#ece9e1;display:block}
-.hc-portal .prow span.p{background:var(--coral-soft)}
-.hc-portal .prow span.g{background:var(--sage-soft)}
-
-@media(max-width:960px){
-  .hc-portal{display:none}
-  .hero-cover .hc-card{width:min(760px,100%)}
-}
 @media(max-width:700px){
-  .hero-cover .hc-inner{min-height:0;padding:40px 16px 44px}
+  .hero-cover .hc-photo img{height:300px}
+  .hero-cover .hc-card{margin-top:-64px;border-radius:24px}
 }
 
 /* ==========================================================================
