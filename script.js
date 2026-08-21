@@ -136,6 +136,7 @@
   /* 12. Scroll-aware guide assistant (robot) */
   (function () {
     var sections = $$("[data-guide]");
+    var isMobile = window.matchMedia("(max-width: 700px)").matches;
     var ROBOT =
       '<g class="g-float">' +
       '<ellipse cx="76" cy="208" rx="15" ry="8" fill="#f2f5f7" stroke="#dbe3e8" stroke-width="2"/>' +
@@ -194,16 +195,18 @@
     }
     function update() { if (dismissed) return; var s = pick(); if (!s || s === current) return; current = s; showBubble(s.getAttribute("data-guide-title"), s.getAttribute("data-guide")); }
     var t;
-    window.addEventListener("scroll", function () { clearTimeout(t); t = setTimeout(update, 550); }, { passive: true });
+    window.addEventListener("scroll", function () { if (isMobile) return; clearTimeout(t); t = setTimeout(update, 550); }, { passive: true });
     closeBtn.addEventListener("click", function () { hideBubble(); dismissed = true; });
     bot.addEventListener("click", function () {
       dismissed = false;
       if (bubble.classList.contains("show")) { hideBubble(); }
       else { current = null; update(); if (!current) showBubble("Hi! I’m your guide", "Scroll through the page and I’ll explain each part. Tap me anytime."); }
     });
-    setTimeout(function () {
-      showBubble("Hi! I’m your guide 👋", "Scroll down and I’ll explain each part as you go.");
-      setTimeout(function () { if (!dismissed) { current = null; update(); } }, 3800);
-    }, 900);
+    if (!isMobile) {
+      setTimeout(function () {
+        showBubble("Hi! I’m your guide 👋", "Scroll down and I’ll explain each part as you go.");
+        setTimeout(function () { if (!dismissed) { current = null; update(); } }, 3800);
+      }, 900);
+    }
   })();
 })();

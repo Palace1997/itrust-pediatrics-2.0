@@ -686,3 +686,12 @@ html.a11y-hide-images img,html.a11y-hide-images iframe,html.a11y-hide-images .ti
 .brand-hipaa .bh-badge svg{width:22px;height:22px}
 .brand-hipaa .bh-text b{display:block;font-family:var(--head);color:#fff;font-size:1rem;line-height:1.15}
 .brand-hipaa .bh-text span{color:rgba(255,255,255,.7);font-size:.82rem;line-height:1.35}
+
+/* --- Mobile fit fixes (guide assistant + contact pills) --- */
+@media(max-width:700px){
+  .guide{right:12px;bottom:12px;gap:8px}
+  .guide-bot{width:60px}
+  .guide-bubble{max-width:min(230px,74vw);font-size:.85rem;padding:12px 26px 12px 14px}
+  .contact-list li{padding:13px 14px}
+  .contact-list a,.contact-list span{overflow-wrap:anywhere;word-break:break-word}
+}
