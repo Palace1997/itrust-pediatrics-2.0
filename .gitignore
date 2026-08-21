@@ -1,6 +1,9 @@
 # OS
 .DS_Store
 
+# Claude Code local config
+.claude/
+
 # Exploration / concept galleries (not part of the site)
 hero-concepts*.html
 assistant-concepts*.html
