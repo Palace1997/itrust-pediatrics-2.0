@@ -13,12 +13,19 @@
     reveals.forEach(function (el) { io.observe(el); });
   } else { reveals.forEach(function (el) { el.classList.add("in"); }); }
 
-  /* 2. Active nav */
+  /* 2. Active nav — only highlight after the user actually clicks a nav item
+     (nothing is green on a fresh visit) */
   var here = (location.pathname.split("/").pop() || "index.html");
+  function navClicked() { try { return sessionStorage.getItem("nav-clicked") === "1"; } catch (e) { return false; } }
   $$(".main-nav a").forEach(function (a) {
-    var h = a.getAttribute("href");
-    if (h === here || (here === "" && h === "index.html")) a.setAttribute("aria-current", "page");
+    a.addEventListener("click", function () { try { sessionStorage.setItem("nav-clicked", "1"); } catch (e) {} });
   });
+  if (navClicked()) {
+    $$(".main-nav a").forEach(function (a) {
+      var h = a.getAttribute("href");
+      if (h === here || (here === "" && h === "index.html")) a.setAttribute("aria-current", "page");
+    });
+  }
 
   /* 3. Mobile drawer */
   var drawer = $("#moreDrawer"), trigger = $(".more-trigger");
