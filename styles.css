@@ -227,14 +227,14 @@ button{font-family:inherit;cursor:pointer}
    COLORFUL FEATURE CARDS (band of 3)
    ========================================================================== */
 .trust-band{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.trust-card{border-radius:var(--r-card);padding:28px;transition:.28s var(--ease);border:2px solid transparent}
-.trust-card:hover{transform:translateY(-8px)}
-.trust-card.c-coral{background:var(--coral-soft)}
-.trust-card.c-sage{background:var(--sage-soft)}
-.trust-card.c-cream{background:var(--cream-2)}
-.tc-ic{width:56px;height:56px;border-radius:18px;display:grid;place-items:center;margin-bottom:16px;background:#fff}
+.trust-card{border-radius:var(--r-card);padding:28px;transition:.28s var(--ease);border:2px solid transparent;box-shadow:var(--shadow-card)}
+.trust-card:hover{transform:translateY(-8px);box-shadow:var(--shadow-soft)}
+.trust-card.c-coral{background:#fbdccf;border-color:#f1bda8}
+.trust-card.c-sage{background:#e0ecc6;border-color:#c6db9f}
+.trust-card.c-cream{background:#e0ecf3;border-color:#c2dae6}
+.tc-ic{width:56px;height:56px;border-radius:18px;display:grid;place-items:center;margin-bottom:16px;background:#fff;box-shadow:0 6px 14px -8px rgba(31,77,46,.3)}
 .tc-ic svg{width:28px;height:28px}
-.c-coral .tc-ic svg{color:var(--coral)}.c-sage .tc-ic svg{color:var(--sage)}.c-cream .tc-ic svg{color:var(--green)}
+.c-coral .tc-ic svg{color:var(--coral)}.c-sage .tc-ic svg{color:#5f7d3a}.c-cream .tc-ic svg{color:#2f8296}
 .trust-card h3{font-size:1.25rem;margin-bottom:6px}
 .trust-card p{color:var(--ink-soft);font-size:.95rem}
 
