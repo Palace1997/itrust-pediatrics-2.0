@@ -122,10 +122,27 @@
     var tabs    = document.getElementById("tabs");
     var openReal= document.getElementById("openReal");
 
+    var fallback;
     function show(loadingOn){
       loading.classList.toggle("hide", !loadingOn);
+      clearTimeout(fallback);
+      if(loadingOn){
+        // safety net: always clear the overlay even if 'load' was missed
+        fallback = setTimeout(function(){ loading.classList.add("hide"); }, 1500);
+      }
     }
     frame.addEventListener("load", function(){ show(false); });
+
+    // If the initial frame already finished loading before this script ran,
+    // the 'load' event won't fire again — hide the overlay now.
+    function alreadyLoaded(){
+      try { return frame.contentDocument &&
+                   frame.contentDocument.readyState === "complete"; }
+      catch(e){ return false; }
+    }
+    if(alreadyLoaded()){ show(false); } else { show(true); }
+    // final safety net on window load
+    window.addEventListener("load", function(){ show(false); });
 
     tabs.addEventListener("click", function(e){
       var btn = e.target.closest("button");
