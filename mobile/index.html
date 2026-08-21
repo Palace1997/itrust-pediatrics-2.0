@@ -57,8 +57,11 @@
     position:relative;width:100%;height:788px;
     border-radius:36px;overflow:hidden;background:var(--cream);
   }
+  /* The iframe is made slightly wider than the frame and the overflow is
+     clipped, so the inner vertical scrollbar sits outside the visible area.
+     This keeps the previewed site perfectly centered (no scrollbar gutter). */
   .screen iframe{
-    width:100%;height:100%;border:0;display:block;background:var(--cream);
+    width:calc(100% + 17px);height:100%;border:0;display:block;background:var(--cream);
   }
   .loading{
     position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
