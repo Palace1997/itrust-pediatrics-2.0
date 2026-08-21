@@ -52,6 +52,10 @@ p{margin:0}
 ul{margin:0;padding:0;list-style:none}
 button{font-family:inherit;cursor:pointer}
 :focus-visible{outline:3px solid var(--coral);outline-offset:3px;border-radius:12px}
+/* Skip to content (keyboard/screen-reader accessibility) */
+.skip-link{position:absolute;left:12px;top:-56px;z-index:300;background:var(--green);color:#fff;font-weight:700;
+  font-size:.9rem;padding:10px 16px;border-radius:12px;text-decoration:none;transition:top .2s var(--ease)}
+.skip-link:focus{top:12px;outline:3px solid var(--coral);outline-offset:2px}
 
 .container{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 26px}
 .section{padding:clamp(4rem,8vw,7rem) 0;position:relative}

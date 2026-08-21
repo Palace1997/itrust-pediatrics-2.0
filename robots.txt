@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://palace1997.github.io/itrust-pediatrics-2.0/sitemap.xml
