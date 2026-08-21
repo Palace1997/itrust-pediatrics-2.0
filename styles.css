@@ -231,10 +231,10 @@ button{font-family:inherit;cursor:pointer}
 .trust-card:hover{transform:translateY(-8px);box-shadow:var(--shadow-soft)}
 .trust-card.c-coral{background:#fbdccf;border-color:#f1bda8}
 .trust-card.c-sage{background:#e0ecc6;border-color:#c6db9f}
-.trust-card.c-cream{background:#e0ecf3;border-color:#c2dae6}
+.trust-card.c-cream{background:#fbe6c2;border-color:#f0d597}
 .tc-ic{width:56px;height:56px;border-radius:18px;display:grid;place-items:center;margin-bottom:16px;background:#fff;box-shadow:0 6px 14px -8px rgba(31,77,46,.3)}
 .tc-ic svg{width:28px;height:28px}
-.c-coral .tc-ic svg{color:var(--coral)}.c-sage .tc-ic svg{color:#5f7d3a}.c-cream .tc-ic svg{color:#2f8296}
+.c-coral .tc-ic svg{color:var(--coral)}.c-sage .tc-ic svg{color:#5f7d3a}.c-cream .tc-ic svg{color:#c98a12}
 .trust-card h3{font-size:1.25rem;margin-bottom:6px}
 .trust-card p{color:var(--ink-soft);font-size:.95rem}
 
