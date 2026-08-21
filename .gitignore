@@ -7,6 +7,7 @@
 # Exploration / concept galleries (not part of the site)
 hero-concepts*.html
 hero-designs*.html
+hero-edge*.html
 assistant-concepts*.html
 *-tuner.html
 

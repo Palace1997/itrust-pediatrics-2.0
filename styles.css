@@ -62,7 +62,7 @@ button{font-family:inherit;cursor:pointer}
 .eyebrow{display:inline-flex;align-items:center;gap:9px;font-family:var(--sans);font-weight:700;font-size:.82rem;
   letter-spacing:.02em;text-transform:uppercase;color:var(--coral-2);background:var(--coral-soft);
   padding:8px 16px;border-radius:var(--r-pill)}
-.eyebrow .dot{width:8px;height:8px;border-radius:50%;background:var(--coral)}
+.eyebrow .dot{display:none}
 .eyebrow.sage{color:#4d6a2c;background:var(--sage-soft)}
 .eyebrow.sage .dot{background:var(--sage)}
 
@@ -156,7 +156,7 @@ button{font-family:inherit;cursor:pointer}
 .hero-actions{display:flex;gap:14px;flex-wrap:wrap}
 .hero-reassure{display:flex;align-items:center;gap:10px;flex-wrap:nowrap;white-space:nowrap;margin-top:28px;font-size:.85rem;
   font-weight:700;color:var(--green-ink)}
-.hero-reassure .rdot{width:10px;height:10px;border-radius:50%;background:var(--sage)}
+.hero-reassure .rdot{display:none}
 .hr-sep{color:var(--cream-3)}
 .hero-visual{position:relative}
 .hero-photo{position:relative;border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--shadow-soft);
