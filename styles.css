@@ -382,6 +382,21 @@ button{font-family:inherit;cursor:pointer}
 .pm.visa .ic{background:#1a1f71}.pm.mc .ic{background:#eb5b26}.pm.amex .ic{background:#1d75c9}.pm.hsa .ic{background:#3f7d52}
 .bill-cta{text-align:center;margin-top:30px}
 
+/* Insurance section — intro text + image on top (homepage #insurance) */
+.ins-top{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(28px,4vw,56px);align-items:center;margin-bottom:clamp(30px,4vw,44px)}
+.ins-copy .eyebrow{margin-bottom:16px}
+.ins-copy h2{font-size:clamp(2rem,3.5vw,2.9rem);line-height:1.05}
+.ins-copy .sub{margin-top:16px;max-width:34rem}
+.ins-cta{margin-top:24px}
+.ins-media{display:flex}
+.ins-photo{flex:1;margin:0;border-radius:24px;overflow:hidden;box-shadow:var(--shadow-soft);border:6px solid #fff;height:clamp(320px,36vw,440px)}
+.ins-photo img{width:100%;height:100%;object-fit:cover;display:block}
+@media(max-width:820px){
+  .ins-top{grid-template-columns:1fr}
+  .ins-media{order:-1}
+  .ins-photo{height:auto;aspect-ratio:16/10}
+}
+
 /* ==========================================================================
    CONTACT
    ========================================================================== */
