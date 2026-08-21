@@ -423,7 +423,7 @@ button{font-family:inherit;cursor:pointer}
 .visit-map .visit-hours{padding:22px 24px}
 .visit-map .hours-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
 .visit-map .hours-head h5{margin:0}
-.footer-bottom{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:40px;padding-top:22px;border-top:1px solid rgba(255,255,255,.12);color:rgba(255,255,255,.55);font-size:.85rem;position:relative;z-index:1}
+.footer-bottom{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:40px;padding-top:6px;color:rgba(255,255,255,.55);font-size:.85rem;position:relative;z-index:1}
 
 /* ==========================================================================
    REVEAL + responsive
@@ -679,3 +679,10 @@ html.a11y-hide-images img,html.a11y-hide-images iframe,html.a11y-hide-images .ti
 .guide-bot.talk-4.talking .g-arm2{animation:t4a2 1s ease-in-out infinite}
 @keyframes t4a2{0%,100%{transform:rotate(9deg)}50%{transform:rotate(-9deg)}}
 @media(prefers-reduced-motion:reduce){.guide-bot .g-arm2{animation:none}}
+
+/* --- HIPAA badge in the footer brand column --- */
+.brand-hipaa{display:flex;align-items:center;gap:12px;margin-top:24px;max-width:22rem;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:13px 16px}
+.brand-hipaa .bh-badge{width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,.1);color:#fff;display:grid;place-items:center;flex:0 0 auto}
+.brand-hipaa .bh-badge svg{width:22px;height:22px}
+.brand-hipaa .bh-text b{display:block;font-family:var(--head);color:#fff;font-size:1rem;line-height:1.15}
+.brand-hipaa .bh-text span{color:rgba(255,255,255,.7);font-size:.82rem;line-height:1.35}
