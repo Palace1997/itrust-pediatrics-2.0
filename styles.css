@@ -544,14 +544,22 @@ html.a11y-hide-images img,html.a11y-hide-images iframe,html.a11y-hide-images .ti
 
 /* --- Why families cards --- */
 .why-band{background:var(--cream-2)}
-.why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:clamp(2rem,4vw,3rem)}
+/* centered heading spans full width so the title fits on one line */
+.why-band .section-head{max-width:none}
+@media(min-width:760px){.why-band .section-head h2{white-space:nowrap}}
+/* left: 2×2 cards · right: photo */
+.why-split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(26px,3.5vw,52px);align-items:stretch;margin-top:clamp(2rem,4vw,3rem)}
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
 .why-card{background:#fff;border:2px solid var(--cream-2);border-radius:20px;padding:28px 20px;text-align:center;transition:.25s var(--ease)}
 .why-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-card);border-color:var(--sage)}
 .why-card .why-ic{width:54px;height:54px;border-radius:50%;background:var(--sage-soft);color:var(--green);display:grid;place-items:center;margin:0 auto 14px}
 .why-card .why-ic svg{width:27px;height:27px}
 .why-card b{display:block;font-family:var(--head);color:var(--green-ink);font-size:1.15rem;margin-bottom:6px}
 .why-card p{color:var(--ink-soft);font-size:.9rem;line-height:1.5}
-@media(max-width:900px){.why-grid{grid-template-columns:1fr 1fr}}
+.why-media{display:flex}
+.why-photo{flex:1;margin:0;border-radius:24px;overflow:hidden;box-shadow:var(--shadow-soft);border:6px solid #fff;min-height:340px}
+.why-photo img{width:100%;height:100%;object-fit:cover;display:block}
+@media(max-width:840px){.why-split{grid-template-columns:1fr}.why-media{order:-1}.why-photo{min-height:0;aspect-ratio:16/10}}
 @media(max-width:520px){.why-grid{grid-template-columns:1fr}}
 
 /* --- HIPAA row inside the footer --- */
