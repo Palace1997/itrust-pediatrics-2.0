@@ -284,6 +284,25 @@ button{font-family:inherit;cursor:pointer}
 .path-step h3{font-size:1.25rem;margin-bottom:8px}
 .path-step p{color:var(--ink-soft);font-size:.95rem}
 
+/* "How It Works" — 2 steps · image · 2 steps (homepage #approach) */
+.hiw-grid{display:grid;grid-template-columns:1fr 1.1fr 1fr;gap:clamp(18px,2.2vw,26px);align-items:stretch;margin-top:clamp(2rem,4vw,3rem)}
+.hiw-col{display:flex;flex-direction:column;gap:16px}
+.hiw-card{position:relative;flex:1;background:#fff;border:1px solid var(--cream-2);border-radius:20px;padding:24px 20px;box-shadow:var(--shadow-card)}
+.hiw-ic{width:46px;height:46px;border-radius:14px;background:var(--coral-soft);display:grid;place-items:center;margin-bottom:13px}
+.hiw-ic svg{width:24px;height:24px;color:var(--coral)}
+.hiw-num{position:absolute;top:16px;right:18px;font-family:var(--head);font-weight:700;font-size:1.05rem;color:var(--cream-3)}
+.hiw-card h3{font-family:var(--head);font-weight:600;color:var(--green-ink);font-size:1.12rem;margin-bottom:6px}
+.hiw-card p{color:var(--ink-soft);font-size:.88rem;line-height:1.5}
+.hiw-media{display:flex}
+.hiw-photo{flex:1;margin:0;border-radius:24px;overflow:hidden;box-shadow:var(--shadow-soft);border:6px solid #fff;min-height:420px}
+.hiw-photo img{width:100%;height:100%;object-fit:cover;display:block}
+@media(max-width:860px){
+  .hiw-grid{grid-template-columns:1fr 1fr}
+  .hiw-media{order:-1;grid-column:1 / -1}
+  .hiw-photo{min-height:0;aspect-ratio:16/9}
+}
+@media(max-width:480px){.hiw-grid{grid-template-columns:1fr}}
+
 /* ==========================================================================
    TEAM
    ========================================================================== */
