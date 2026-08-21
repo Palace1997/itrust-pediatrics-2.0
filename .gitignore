@@ -1,0 +1,11 @@
+# OS
+.DS_Store
+
+# Exploration / concept galleries (not part of the site)
+hero-concepts*.html
+assistant-concepts*.html
+*-tuner.html
+
+# Unrelated local files
+order_102677_files*/
+order_102677_files*
